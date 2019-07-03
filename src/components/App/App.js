@@ -49,13 +49,12 @@ class App extends Component {
         <header>
           <h1>LightSide</h1>
         </header>
-        {this.state.isLoading === true ?
-        loadingMessage :
-        <Showcase 
-          films = {this.state.films}/>
+        {
+          this.state.isLoading === true 
+          ? loadingMessage 
+          : <Showcase films={this.state.films}/>
         }
       </div>
-    
     )
   }
 }
