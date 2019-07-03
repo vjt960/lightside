@@ -8,9 +8,11 @@ class App extends Component {
     this.state = {
       isLoading: true,
       error: '',
-      films: []
+      films: [], 
+      people: [], 
+      planets: [], 
+      vehicles: []
     }
-    console.log(this.state.films)
   }
 
   componentDidMount() {
