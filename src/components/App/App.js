@@ -16,13 +16,15 @@ class App extends Component {
   }
 
   componentDidMount() {
-    let url = 'https://swapi.co/api/';
+    this.getFilms();
+  }
 
-    fetch(`${url}films/`)
+  getFilms = () => {
+    fetch('https://swapi.co/api/films/')
       .then(response => response.json())
       .then(data => this.filmData(data.results))
       .then(films => this.setState({ films: films, isLoading: false }))
-      .catch(error => this.setState({error: error.message}))
+      .catch(error => this.setState({ error: error.message }))
   }
 
   filmData = films => {
