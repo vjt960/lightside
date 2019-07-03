@@ -1,8 +1,11 @@
+@import '../../sass/_mixins.scss';
+@import '../../sass/_variables.scss';
+
 .loading {
   text-align: center;
   margin-top: 20px;
   height: 100vh;
-  
+
   .loading-text {
   color: $main-color;
   font-family: $star-wars-font;
