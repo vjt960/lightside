@@ -32,14 +32,25 @@ class App extends Component {
     })
     return Promise.all(neededInfo)
   }
-
+  
+  
   render() {
+    const loadingMessage = (
+      <div className='loading'>
+        <img 
+          src='https://ui-ex.com/images/transparent-gifs-star-wars.gif' 
+          alt='BB8 Loading'/>
+        <h2>Loading...</h2>
+      </div>
+    )
+
     return (
       <div>
         <header>
           <h1>LightSide</h1>
         </header>
-        {this.state.isLoading === false &&
+        {this.state.isLoading === true ?
+        loadingMessage :
         <Showcase 
           films = {this.state.films}/>
         }
