@@ -11,7 +11,8 @@ class App extends Component {
       films: [], 
       people: [], 
       planets: [], 
-      vehicles: []
+      vehicles: [], 
+      favorites: []
     }
   }
 
