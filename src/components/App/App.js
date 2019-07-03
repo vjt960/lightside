@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Loader from '../Loader/Loader';
 import Showcase from '../Showcase/Showcase';
 import './App.scss';
 
@@ -40,15 +41,6 @@ class App extends Component {
   
   
   render() {
-    const loadingMessage = (
-      <div className='loading'>
-        <img 
-          src='https://ui-ex.com/images/transparent-gifs-star-wars.gif' 
-          alt='BB8 Loading'/>
-        <h2 className='loading-text'>Loading...</h2>
-      </div>
-    )
-
     return (
       <div className='App'>
         <header>
@@ -56,7 +48,7 @@ class App extends Component {
         </header>
         {
           this.state.isLoading === true 
-          ? loadingMessage 
+          ? <Loader /> 
           : <Showcase films={this.state.films}/>
         }
       </div>
