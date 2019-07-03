@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Loader from '../Loader/Loader';
+import Home from '../Home/Home';
 import Showcase from '../Showcase/Showcase';
+import Form from '../Form/Form';
+import Catalog from '../Catalog/Catalog';
 import './App.scss';
 
 class App extends Component {
@@ -8,7 +12,8 @@ class App extends Component {
     super();
     this.state = {
       isLoading: true,
-      error: '',
+      error: '', 
+      category: '',
       films: [], 
       people: [], 
       planets: [], 
@@ -41,6 +46,9 @@ class App extends Component {
   
   
   render() {
+
+    const { people, planets, vehicles, favorites } = this.state;
+
     return (
       <div className='App'>
         <header>
@@ -48,8 +56,16 @@ class App extends Component {
         </header>
         {
           this.state.isLoading ? <Loader /> 
-          : <Showcase films={this.state.films}/>
+          : <Showcase films={this.state.films} />
         }
+        <Form />
+        <Switch>
+          <Route exact path='/' component={ Home } />
+          <Route exact path='/people' render={() => <Catalog data={people} info={Object.keys(people[0])} /> } />
+          <Route exact path='/planets' render={() => <Catalog data={planets} info={Object.keys(planets[0])} /> } />
+          <Route exact path='/vehicles' render={() => <Catalog data={vehicles} info={Object.keys(vehicles[0])} /> } />
+          <Route exact path='/favorites' render={() => <Catalog data={favorites} info={Object.keys(favorites[0])} /> } />
+        </Switch>
       </div>
     )
   }
