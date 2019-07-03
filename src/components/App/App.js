@@ -40,12 +40,12 @@ class App extends Component {
         <img 
           src='https://ui-ex.com/images/transparent-gifs-star-wars.gif' 
           alt='BB8 Loading'/>
-        <h2>Loading...</h2>
+        <h2 className='loading-text'>Loading...</h2>
       </div>
     )
 
     return (
-      <div>
+      <div className='App'>
         <header>
           <h1>LightSide</h1>
         </header>

@@ -1,9 +1,29 @@
 @import '../../sass/_mixins.scss';
 @import '../../sass/_variables.scss';
 
-h1 {
-  font-family: 'Starjedi';
-  font-size: 5em;
+.App {
+  display: grid;
+  grid-template-rows: 10% 30% 15% 45%;
+  background: url(../../images/background.jpg);
+  background-repeat: no-repeat;
+}
+header {
+  grid-row: 1/2;
+  h1 {
+    font-family: 'Starjedi';
+    font-size: 5em;
+    text-align: center;
+    margin: 0;
+    color:hsla(51, 100%, 50%, 1);
+  }
+}
+
+.loading {
   text-align: center;
-  margin: 0;
+  margin-top: 20px;
+  height: 100vh;
+  .loading-text {
+  color:hsla(51, 100%, 50%, 1);
+  font-family: 'Starjedi';
+  }
 }
