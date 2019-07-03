@@ -46,7 +46,6 @@ class App extends Component {
   
   
   render() {
-
     const { people, planets, vehicles, favorites } = this.state;
 
     return (
