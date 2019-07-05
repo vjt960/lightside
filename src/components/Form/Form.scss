@@ -1,2 +1,16 @@
 @import '../../sass/_mixins.scss';
 @import '../../sass/_variables.scss';
+
+.buttons {
+  grid-row: 3/4;
+  text-align: center;
+}
+
+.button {
+  background-color: $main-color;
+  margin: 20px;
+  height: 75px;
+  width: 150px;
+  font-size: 1.25em;
+  font-family: $star-wars-font;
+}
