@@ -2,10 +2,18 @@ import React from 'react';
 import './Catalog.scss';
 import { Link } from 'react-router-dom';
 
-const Catalog = ({ data }) => {
-  console.log(data)
+const Catalog = (props) => {
+  let data = props.data.map(obj => {
+    return (
+      <div>
+        <h1>{obj.name}</h1>
+      </div>
+    )
+  })
   return(
-    <h2>Catelog Start</h2>
+    <article className='catalog'>
+      {data}
+    </article>
   )
 }
 

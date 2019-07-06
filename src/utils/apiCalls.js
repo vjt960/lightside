@@ -63,7 +63,6 @@ let netData = {
 export let fetchAPI = 
   Promise.all([getFilms(), getPeople(), getPlanets(), getVehicles()])
     .then(response => {
-      console.log(response)
       netData['films'] = response.shift();
       netData['people'] = response.shift();
       netData['planets'] = response.shift();

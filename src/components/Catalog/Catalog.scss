@@ -1,2 +1,10 @@
 @import '../../sass/_mixins.scss';
 @import '../../sass/_variables.scss';
+
+.catalog {
+  grid-row: 4/5;
+  background-color: hsla(0, 0%, 100%, .2);
+  height: 43vh;
+  border: 5px solid $main-color;
+
+}

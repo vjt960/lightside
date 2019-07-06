@@ -15,6 +15,9 @@ const Form = () => {
         <div className='button'>
           <NavLink to='/vehicles'>vehicles</NavLink>
         </div>
+        <div className='button'>
+          <NavLink to='/favorites'>favorites</NavLink>
+        </div>
       </section>
     )
 }
