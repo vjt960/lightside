@@ -3,18 +3,8 @@
 
 .App {
   display: grid;
-  grid-template-rows: 10% 30% 15% 45%;
+  grid-template-rows: 10% 35% 10% 45%;
   background: url(../../images/background.jpg);
   background-repeat: no-repeat;
   height: 100vh;
-}
-
-.loading {
-  text-align: center;
-  margin-top: 20px;
-  height: 100vh;
-  .loading-text {
-  color:$main-color;
-  font-family: $star-wars-font;
-  }
 }

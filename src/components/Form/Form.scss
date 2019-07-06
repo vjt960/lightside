@@ -6,20 +6,31 @@
   text-align: center;
   display: flex;
   flex-direction: row;
-  text-align: center;
   justify-content: center;
   align-content: space-around;
 }
 
-.button {
+button {
   background-color: $main-color;
   margin: 20px;
-  height: 75px;
-  width: 200px;
+  margin-top: 5px;
+  height: 60px;
+  width: 275px;
   font-size: 1.5em;
   font-family: $star-wars-font;
   border: 5px solid #fff;
-  :hover {
-    font-size: 1.35em;
-  }
 }
+
+button:hover {
+    font-size: 1.75em;
+}
+
+.active {
+  color: $secondary-color;
+  font-size: 1.3em;
+  height: 65px;
+  width: 205px;
+}
+
+
+
