@@ -1,8 +1,10 @@
 import React from 'react';
 import './Showcase.scss';
 
-const Showcase = ({films}) => {
-  let movie = films[0]
+const Showcase = (props) => {
+  const { films } = props;
+  const randomIndex = Math.floor(Math.random() * Math.floor(films.length))
+  let movie = films[randomIndex]
 
   return (
     <div className='fade Showcase'>
