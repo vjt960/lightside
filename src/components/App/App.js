@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-// import { Route, Switch } from 'react-router-dom';
+// import { Route, NavLink, Switch } from 'react-router-dom';
 import {fetchAPI as data} from '../../utils/apiCalls';
 import Loader from '../Loader/Loader';
 // import Home from '../Home/Home';
 import Showcase from '../Showcase/Showcase';
-// import Form from '../Form/Form';
-// import Catalog from '../Catalog/Catalog';
+import Form from '../Form/Form';
 import './App.scss';
 
 class App extends Component {
@@ -42,7 +41,8 @@ class App extends Component {
         {
           this.state.isLoading ? <Loader /> 
           : <Showcase films={films} />
-        }       
+        }
+        <Form />
       </div>
     )
   }
