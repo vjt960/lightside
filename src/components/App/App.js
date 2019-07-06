@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, NavLink, Switch } from 'react-router-dom';
 import {fetchAPI as data} from '../../utils/apiCalls';
+import Header from '../Header/Header';
 import Loader from '../Loader/Loader';
 import Showcase from '../Showcase/Showcase';
 import Form from '../Form/Form';
@@ -35,10 +36,7 @@ class App extends Component {
 
     return (
       <div className='App'>
-        {/* <Route exact path='/' component=/> */}
-        <header>
-          <h1>LightSide</h1>
-        </header>
+        <Header />
         {
           this.state.isLoading ? <Loader /> 
           : <Showcase films={films} />

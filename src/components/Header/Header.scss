@@ -1,0 +1,17 @@
+@import '../../sass/_mixins.scss';
+@import '../../sass/_variables.scss';
+
+header {
+  grid-row: 1/2;
+  h1 {
+    font-family: $star-wars-font;
+    font-size: 5em;
+    text-align: center;
+    margin: 0;
+    color:$main-color;
+  }
+}
+
+a {
+  text-decoration: none;
+}
