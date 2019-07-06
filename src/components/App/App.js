@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Showcase from '../Showcase/Showcase';
+import Form from '../Form/Form';
 import './App.scss';
+import { Route, NavLink } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -8,9 +10,11 @@ class App extends Component {
     this.state = {
       isLoading: true,
       error: '',
-      films: []
+      films: [],
+      people: [],
+      planets: [],
+      vehicles: []
     }
-    console.log(this.state.films)
   }
 
   componentDidMount() {
@@ -20,6 +24,24 @@ class App extends Component {
       .then(response => response.json())
       .then(data => this.filmData(data.results))
       .then(films => this.setState({ films: films, isLoading: false }))
+      .catch(error => this.setState({error: error.message}))
+    
+    fetch(`${url}people/`)
+      .then(response => response.json())
+      .then(data => this.peopleData(data.results))
+      .then(people => this.setState({ people: people }))
+      .catch(error => this.setState({error: error.message}))
+
+    fetch(`${url}planets/`)
+      .then(response => response.json())
+      .then(data => this.planetData(data.results))
+      .then(planet => this.setState({ planets: planet }))
+      .catch(error => this.setState({error: error.message}))
+    
+    fetch(`${url}vehicles/`)
+      .then(response => response.json())
+      .then(data => this.vehicleData(data.results))
+      .then(vehicle => this.setState({ vehicles: vehicle }))
       .catch(error => this.setState({error: error.message}))
   }
 
@@ -32,7 +54,43 @@ class App extends Component {
     })
     return Promise.all(neededInfo)
   }
+
+  peopleData = people => {
+    const peopleInfo = people.map(person => {
+      return {
+        name: person.name,
+        birthYear: person.birth_year,
+        gender: person.gender,
+        height: person.height, 
+        eyeColor: person.eye_color
+      }
+    })
+    return Promise.all(peopleInfo);
+  }
   
+  planetData = planets => {
+    const planetInfo = planets.map(planet => {
+      return {
+        name: planet.name,
+        terrain: planet.terrain,
+        diameter: planet.diameter,
+        population: planet.population, 
+      }
+    })
+    return Promise.all(planetInfo);
+  }
+
+  vehicleData = vehicles => {
+    const vehicleInfo = vehicles.map(vehicle => {
+      return {
+        name: vehicle.name,
+        model: vehicle.model,
+        class: vehicle.vehicle_class,
+        numberPassengers: vehicle.passengers, 
+      }
+    })
+    return Promise.all(vehicleInfo);
+  }
   
   render() {
     const loadingMessage = (
@@ -52,8 +110,10 @@ class App extends Component {
         {this.state.isLoading === true ?
         loadingMessage :
         <Showcase 
-          films = {this.state.films}/>
+          films = {this.state.films}
+        />
         }
+        <Form />
       </div>
     
     )
