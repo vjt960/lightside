@@ -4,13 +4,22 @@
 .buttons {
   grid-row: 3/4;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-content: space-around;
 }
 
 .button {
   background-color: $main-color;
   margin: 20px;
   height: 75px;
-  width: 150px;
-  font-size: 1.25em;
+  width: 200px;
+  font-size: 1.75em;
   font-family: $star-wars-font;
+}
+
+a{
+  margin-top: 100px;
 }

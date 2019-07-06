@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Showcase from '../Showcase/Showcase';
 import Form from '../Form/Form';
 import './App.scss';
+import { Route, NavLink } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -14,7 +15,6 @@ class App extends Component {
       planets: [],
       vehicles: []
     }
-    console.log(this.state.films)
   }
 
   componentDidMount() {
@@ -110,7 +110,8 @@ class App extends Component {
         {this.state.isLoading === true ?
         loadingMessage :
         <Showcase 
-          films = {this.state.films}/>
+          films = {this.state.films}
+        />
         }
         <Form />
       </div>
