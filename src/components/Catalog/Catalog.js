@@ -9,9 +9,9 @@ const Catalog = (props) => {
     )
   })
   return(
-    <article className='catalog'>
+    <section className='catalog'>
       {data}
-    </article>
+    </section>
   )
 }
 

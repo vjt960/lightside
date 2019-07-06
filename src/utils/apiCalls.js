@@ -5,7 +5,8 @@ function getFilms() {
       return {
         title: film.title, 
         releaseDate: film.release_date, 
-        openingCrawl: film.opening_crawl
+        openingCrawl: film.opening_crawl, 
+        key: film.title
       }
     }))
 }
@@ -20,7 +21,8 @@ function getPeople() {
         gender: person.gender, 
         height: person.height, 
         eyeColor: person.eye_color, 
-        favorited: false
+        favorited: false, 
+        key: person.name
       }
     }))
 }
@@ -34,7 +36,8 @@ function getPlanets() {
         terrain: planet.terrain, 
         diameter: planet.diameter, 
         population: planet.population, 
-        favorited: false
+        favorited: false, 
+        key: planet.name
       }
     }))
 }
@@ -48,7 +51,8 @@ function getVehicles() {
         model: vehicle.model, 
         class: vehicle.vehicle_class, 
         passengers: vehicle.passengers, 
-        favorited: false
+        favorited: false, 
+        key: vehicle.name
       }
     }))
 }
