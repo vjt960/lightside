@@ -1,13 +1,11 @@
 import React from 'react';
 import './Catalog.scss';
-import { Link } from 'react-router-dom';
+import Card from '../Card/Card';
 
 const Catalog = (props) => {
   let data = props.data.map(obj => {
     return (
-      <div>
-        <h1>{obj.name}</h1>
-      </div>
+      <Card data={Object.entries(obj)} />
     )
   })
   return(
