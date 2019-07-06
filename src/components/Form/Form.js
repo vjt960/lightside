@@ -6,18 +6,10 @@ const Form = () => {
 
     return(
       <section className='buttons'>
-        <div className='button'>
-          <NavLink to='/people' >People</NavLink>
-        </div>
-        <div className='button'>
-          <NavLink to='/planets'>Planets</NavLink>
-        </div>
-        <div className='button'>
-          <NavLink to='/vehicles'>vehicles</NavLink>
-        </div>
-        <div className='button'>
-          <NavLink to='/favorites'>favorites</NavLink>
-        </div>
+        <button><NavLink to='/people' className='button'>People</NavLink></button>
+        <button><NavLink to='/planets' className='button'>Planets</NavLink></button>
+        <button><NavLink to='/vehicles' className='button'>vehicles</NavLink></button>
+        <button><NavLink to='/favorites' className='button'>favorites</NavLink></button>
       </section>
     )
 }
