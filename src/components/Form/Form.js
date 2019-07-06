@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Form.scss';
 
 const Form = () => {
@@ -14,6 +14,9 @@ const Form = () => {
         </div>
         <div className='button'>
           <NavLink to='/vehicles'>vehicles</NavLink>
+        </div>
+        <div className='button'>
+          <NavLink to='/favorites'>favorites</NavLink>
         </div>
       </section>
     )
