@@ -1,0 +1,9 @@
+@mixin zeroSpacing() {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin setDimensions($height, $width) {
+  height: $height;
+  width: $width;
+}
