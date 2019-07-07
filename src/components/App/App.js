@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import {fetchAPI as data} from '../../utils/apiCalls';
-import Header from '../Header/Header';
 import Loader from '../Loader/Loader';
 import Showcase from '../Showcase/Showcase';
 import Form from '../Form/Form';
@@ -66,7 +65,6 @@ class App extends Component {
 
     return (
       <div className='App'>
-        <Header />
         {
           this.state.isLoading ? <Loader /> 
           : <Showcase films={films} />
