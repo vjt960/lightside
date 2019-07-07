@@ -13,7 +13,7 @@ header {
   }
 
   h1 {
-    @include setDimensions(0,0);
+    @include zeroSpacing();
     font-family: $star-wars-font;
     text-align: center;
     color: black;
