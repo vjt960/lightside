@@ -5,9 +5,15 @@ import Card from '../Card/Card';
 const Catalog = (props) => {
   let data = props.data.map(obj => {
     return (
-      <Card data={Object.entries(obj)} />
-    )
-  })
+      <Card 
+        toggle={props.toggle} 
+        type={obj.type} 
+        name={obj.name} 
+        data={Object.entries(obj)} 
+      />
+    );
+  });
+  
   return(
     <section className='catalog'>
       {data}
