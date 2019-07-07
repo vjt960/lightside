@@ -5,12 +5,12 @@ import './Form.scss';
 const Form = () => {
 
     return(
-      <section className='buttons'>
-        <button><NavLink to='/people' className='button'>People</NavLink></button>
+      <form className='buttons'>
+        <button><NavLink to='/people' className='button'>people</NavLink></button>
         <button><NavLink to='/planets' className='button'>Planets</NavLink></button>
         <button><NavLink to='/vehicles' className='button'>vehicles</NavLink></button>
-        <button><NavLink to='/favorites' className='button'>favorites</NavLink></button>
-      </section>
+        <button><NavLink to='/favorites' className='button favorite-btn'>favorites</NavLink></button>
+      </form>
     )
 }
 
