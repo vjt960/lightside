@@ -22,6 +22,7 @@ function getPeople() {
         height: person.height, 
         eyeColor: person.eye_color, 
         favorited: false, 
+        type: 'people', 
         key: person.name
       }
     }))
@@ -37,6 +38,7 @@ function getPlanets() {
         diameter: planet.diameter, 
         population: planet.population, 
         favorited: false, 
+        type: 'planets', 
         key: planet.name
       }
     }))
@@ -52,6 +54,7 @@ function getVehicles() {
         class: vehicle.vehicle_class, 
         passengers: vehicle.passengers, 
         favorited: false, 
+        type: 'vehicles', 
         key: vehicle.name
       }
     }))
