@@ -24,6 +24,7 @@ const Showcase = (props) => {
             <h1>{movie.title}</h1>
           </div>
           { crawls }
+         <p>{movie.releaseDate}</p>
          </div>
       </section>
     </div>
