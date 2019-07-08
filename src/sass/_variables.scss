@@ -4,6 +4,19 @@
   font-weight: normal;
 }
 
+@import url(//db.onlinewebfonts.com/c/a31f2dcca3a21b5fb98e75d4411af836?family=ITCSerifGothicW01-Regular);
+
+@font-face {
+  font-family: "ITCSerifGothicW01-Regular";
+  src: url("//db.onlinewebfonts.com/t/a31f2dcca3a21b5fb98e75d4411af836.eot");
+  src: url("//db.onlinewebfonts.com/t/a31f2dcca3a21b5fb98e75d4411af836.eot?#iefix") format("embedded-opentype"),
+  url("//db.onlinewebfonts.com/t/a31f2dcca3a21b5fb98e75d4411af836.woff2") format("woff2"),
+  url("//db.onlinewebfonts.com/t/a31f2dcca3a21b5fb98e75d4411af836.woff") format("woff"),
+  url("//db.onlinewebfonts.com/t/a31f2dcca3a21b5fb98e75d4411af836.ttf") format("truetype"),
+  url("//db.onlinewebfonts.com/t/a31f2dcca3a21b5fb98e75d4411af836.svg#ITCSerifGothicW01-Regular") format("svg");
+}
+
 $main-color: hsla(51, 100%, 50%, 1);
 $star-wars-font: 'Starjedi'; 
+$second-font: "ITCSerifGothicW01-Regular";
 $secondary-color: hsla(252, 100%, 50%, 1)
