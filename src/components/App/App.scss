@@ -1,8 +1,12 @@
 @import '../../sass/_mixins.scss';
 @import '../../sass/_variables.scss';
 
+* {
+  box-sizing: border-box;
+}
+
 .App {
   background: url(../../images/starfield.jpg);
   background-repeat: no-repeat;
-  height: 100vh;
+  height: auto;
 }

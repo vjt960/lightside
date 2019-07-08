@@ -29,7 +29,6 @@ class App extends Component {
   }
 
   toggleFavorite = (category, name) => {
-    console.log('toggling fave')
     let clonedState = this.state[category].slice();
     let index = clonedState.findIndex(obj => {
       return obj.name === name;
@@ -61,19 +60,23 @@ class App extends Component {
   
   render() {
 
-    const { films } = this.state;
+    // const { films, favorites } = this.state;
+    const { films, people, planets, vehicles, favorites } = this.state;
+
 
     return (
+
       <div className='App'>
         {
           this.state.isLoading ? <Loader /> 
           : <Showcase films={films} />
         }
-        <Form />
-        <Route exact path='/people' render={() => <Catalog toggle={this.toggleFavorite} data={this.state.people} />} />
-        <Route exact path='/planets' render={() => <Catalog toggle={this.toggleFavorite} data={this.state.planets} />} />
-        <Route exact path='/vehicles' render={() => <Catalog toggle={this.toggleFavorite} data={this.state.vehicles} />} />
-        <Route exact path='/favorites' render={() => <Catalog toggle={this.toggleFavorite} data={this.state.favorites} />} />
+        <Form counter={favorites.length} />
+        <Route exact path='/' render={() => <Catalog counter={1} data={[]} />} />
+        <Route exact path='/people' render={() => <Catalog toggle={this.toggleFavorite} counter={people.length} data={people} />} />
+        <Route exact path='/planets' render={() => <Catalog toggle={this.toggleFavorite} counter={planets.length} data={planets} />} />
+        <Route exact path='/vehicles' render={() => <Catalog toggle={this.toggleFavorite} counter={vehicles.length} data={vehicles} />} />
+        <Route exact path='/favorites' render={() => <Catalog toggle={this.toggleFavorite} counter={favorites.length} data={favorites} />} />
       </div>
     )
   }
