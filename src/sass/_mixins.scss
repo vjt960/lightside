@@ -7,3 +7,12 @@
   height: $height;
   width: $width;
 }
+
+@mixin hollowColor {
+  color: black;
+  text-shadow: 
+    -1px 0 $main-color, 
+    0 1px $main-color, 
+    1px 0 $main-color, 
+    0 -1px $main-color;
+}
