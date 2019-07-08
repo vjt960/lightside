@@ -36,6 +36,15 @@ Then, go to http://localhost:3000/ in your browser to see the code running in th
 - Understand and utilize React Router to effectively display data.
 - Use propTypes for every component receiving props.
 
+## Technologies Used
+- HTML
+- SCSS 
+- JavaScript
+- React
+- Router
+- Jest & Enzyme
+- API fetches
+
 ## Contributors
 [Emily Dittmer](https://github.com/emilydittmer)
 
