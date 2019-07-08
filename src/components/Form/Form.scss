@@ -1,36 +1,52 @@
 @import '../../sass/_mixins.scss';
 @import '../../sass/_variables.scss';
 
-.buttons {
-  grid-row: 3/4;
-  text-align: center;
+.category-form {
+  @include zeroSpacing();
+  @include setDimensions(25vh, 100%);
+  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
 }
 
-button {
-  background-color: $main-color;
-  margin: 20px;
-  margin-top: 5px;
-  height: 60px;
-  width: 275px;
-  font-size: 1.5em;
+.category-btn {
+  @include zeroSpacing();
+  @include setDimensions(50px, 175px);
+  background-color: rgba(0,0,0,.85);
+  border-radius: 5%;
+  outline: none;
+}
+
+.nav-link {
+  @include setDimensions(100%, 100%);
+  @include zeroSpacing();
+  @include hollowColor();
+  font-size: 2em;
   font-family: $star-wars-font;
-  border: 5px solid #fff;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-button:hover {
-    font-size: 1.75em;
+.fave-btn {
+  @include setDimensions(50px, 200px);
+  position: absolute;
+  border: .5px solid $main-color;
+  right: 20px;
+  bottom: -25px;
+}
+
+.counter {
+  background-color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  padding: 0 10px;
 }
 
 .active {
-  color: $secondary-color;
-  font-size: 1.3em;
-  height: 65px;
-  width: 205px;
+  color: $main-color;
+  text-shadow: none;
 }
-
-
-
