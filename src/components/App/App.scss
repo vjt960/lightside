@@ -1,10 +1,12 @@
 @import '../../sass/_mixins.scss';
 @import '../../sass/_variables.scss';
 
+* {
+  box-sizing: border-box;
+}
+
 .App {
-  display: grid;
-  grid-template-rows: 10% 35% 10% 45%;
-  background: url(../../images/background.jpg);
+  background: url(../../images/starfield.jpg);
   background-repeat: no-repeat;
-  height: 100vh;
+  height: auto;
 }

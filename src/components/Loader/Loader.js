@@ -1,13 +1,16 @@
 import React from 'react';
 import './Loader.scss';
+import Header from '../Header/Header';
 
 const Loader = () => {
   return (
-    <div className='loading'>
+    <div className='loading showcase'>
+      <Header />
       <img 
-        src='https://ui-ex.com/images/transparent-gifs-star-wars.gif' 
+        className='loading-img'
+        src={require('../../images/bb8.gif')} 
         alt='BB8 Loading'/>
-      <h2 className='loading-text'>Loading...</h2>
+      <h2 className='loading-text'>Loading . . .</h2>
     </div>
   )
 }

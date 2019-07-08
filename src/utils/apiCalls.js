@@ -6,6 +6,7 @@ function getFilms() {
         title: film.title, 
         releaseDate: film.release_date, 
         openingCrawl: film.opening_crawl, 
+        episode: film.episode_id, 
         key: film.title
       }
     }))

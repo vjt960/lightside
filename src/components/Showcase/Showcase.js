@@ -1,21 +1,31 @@
 import React from 'react';
 import './Showcase.scss';
+import Header from '../Header/Header.js';
 
 const Showcase = (props) => {
   const { films } = props;
   const randomIndex = Math.floor(Math.random() * Math.floor(films.length))
-  let movie = films[randomIndex]
+  const movie = films[randomIndex]
+  const crawls = movie.openingCrawl
+    .split('.').map(sentence => {
+      return (
+        <p>{sentence}</p>
+      )
+    })
 
   return (
-    <div className='fade Showcase'>
-      <section className='star-wars'>
-        <div className='crawl'>
-          <div className='title'>
-            <h3>{movie.title}</h3>
-            <h4>{movie.releaseDate}</h4>
-            <p>{movie.openingCrawl}</p>
+    <div className='showcase'>
+      <Header />
+      <div className="fade"></div>
+      <section className="star-wars">
+        <div className="crawl">
+          <div className="title">
+            <p>{`Episode ${movie.episode}`}</p>
+            <h1>{movie.title}</h1>
           </div>
-        </div>
+          { crawls }
+         <p>{movie.releaseDate}</p>
+         </div>
       </section>
     </div>
   )

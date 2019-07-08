@@ -1,17 +1,22 @@
 @import '../../sass/_mixins.scss';
 @import '../../sass/_variables.scss';
 
-header {
-  grid-row: 1/2;
-  h1 {
-    font-family: $star-wars-font;
-    font-size: 5em;
-    text-align: center;
-    margin: 0;
-    color:$main-color;
-  }
-}
+.main-header {
+  background-color: black;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
 
-a {
-  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
+
+  h1 {
+    @include zeroSpacing();
+    font-family: $star-wars-font;
+    text-align: center;
+    color: black;
+    text-shadow: -1px 0 $main-color, 0 1px $main-color, 1px 0 $main-color, 0 -1px $main-color;
+  }
 }

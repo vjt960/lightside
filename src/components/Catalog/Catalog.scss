@@ -2,9 +2,21 @@
 @import '../../sass/_variables.scss';
 
 .catalog {
-  grid-row: 4/5;
-  background-color: hsla(0, 0%, 100%, .2);
-  height: 43vh;
-  border: 5px solid $main-color;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding: 20px 20px 0 20px;
+  background-color: hsla(51, 100%, 20%, .2);
+  color: black;
+  height: 50vh;
+  border: 1px solid $main-color;
+  overflow-y: scroll;
+}
 
+.favorites-placeholder {
+  grid-column: 1/-1;
+  font-size: 5em;
+  color: $main-color;
+  font-family: $second-font;
+  text-align: center;
 }

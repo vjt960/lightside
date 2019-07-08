@@ -1,2 +1,44 @@
 @import '../../sass/_mixins.scss';
 @import '../../sass/_variables.scss';
+
+
+article {
+  @include setDimensions(200px, 100%);
+  background-color: rgba(255, 255, 255, 0.65);
+  border: 1px solid $main-color;
+  font-family: $second-font;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.card-header {
+  @include setDimensions(15%, 100%);
+}
+
+table {
+  @include setDimensions(70%, 60%);
+  margin: auto;
+}
+
+.fave-toggle-btn {
+  @include setDimensions(24px, 24px);
+  background-image: url('../../images/rebelWhite.png');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: none;
+  float: right;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.toggle-true {
+  background-image: url('../../images/rebelBlack.png');
+}
+
+.fave-toggle-btn span {
+  display: none;
+}
