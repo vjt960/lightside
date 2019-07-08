@@ -38,4 +38,5 @@ Then, go to http://localhost:3000/ in your browser to see the code running in th
 
 ## Contributors
 [Emily Dittmer](https://github.com/emilydittmer)
+
 [Vinton Teo](https://github.com/vjt960)
