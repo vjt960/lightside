@@ -24,6 +24,17 @@ npm start
 Then, go to http://localhost:3000/ in your browser to see the code running in the browser.
 
 ## Screenshots
+### Home Page
+![Imgur](https://i.imgur.com/tnMwSVz.png)
+
+### Display Cards
+![Imgur](https://i.imgur.com/LvRRe0n.png)
+
+### Display Favorites
+![Imgur](https://i.imgur.com/cwvfDIk.png)
+
+### No Favorites
+![Imgur](https://i.imgur.com/yFjkuBt.png)
 
 
 ## Learning Goals
