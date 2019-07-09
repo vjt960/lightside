@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should add objects to favorites 1`] = `ShallowWrapper {}`;
+
+exports[`App should match snapshot 1`] = `ShallowWrapper {}`;
+
+exports[`App should remove objects from favorites 1`] = `ShallowWrapper {}`;
+
+exports[`App should removed objects from favorites 1`] = `ShallowWrapper {}`;
