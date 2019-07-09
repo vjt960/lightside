@@ -22,7 +22,9 @@ const Catalog = (props) => {
     <section className='catalog'>
       {
         counter > 0 ? data 
-        : <h2 className='favorites-placeholder'>Add some favorites!</h2>
+        : <h2 className='favorites-placeholder'>
+            Add some favorites!
+          </h2>
       }
     </section>
   )

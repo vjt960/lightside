@@ -17,7 +17,12 @@ const Card = (props) => {
   return (
     <article>
       <header className='card-header'>
-        <button className={`fave-toggle-btn toggle-${favorited}`} onClick={() => toggle(type, name)}><span>X</span></button>
+        <button 
+          className={`fave-toggle-btn toggle-${favorited}`} 
+          onClick={() => toggle(type, name)}
+        >
+          <span>Favorite</span>
+        </button>
       </header>
       <table>
         <tbody>
