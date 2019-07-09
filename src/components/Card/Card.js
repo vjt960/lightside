@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Card.scss';
 
 const Card = (props) => {
@@ -16,7 +17,12 @@ const Card = (props) => {
   return (
     <article>
       <header className='card-header'>
-        <button className={`fave-toggle-btn toggle-${favorited}`} onClick={() => toggle(type, name)}><span>X</span></button>
+        <button 
+          className={`fave-toggle-btn toggle-${favorited}`} 
+          onClick={() => toggle(type, name)}
+        >
+          <span>Favorite</span>
+        </button>
       </header>
       <table>
         <tbody>
@@ -25,6 +31,14 @@ const Card = (props) => {
       </table>
     </article>
   )
+}
+
+Card.propTypes = {
+  toggle: PropTypes.func.isRequired, 
+  type: PropTypes.string.isRequired, 
+  name: PropTypes.string.isRequired, 
+  favorited: PropTypes.bool.isRequired, 
+  data: PropTypes.array.isRequired
 }
 
 export default Card;

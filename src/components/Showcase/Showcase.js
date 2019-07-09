@@ -1,6 +1,7 @@
 import React from 'react';
 import './Showcase.scss';
 import Header from '../Header/Header.js';
+import PropTypes from 'prop-types';
 
 const Showcase = (props) => {
   const { films } = props;
@@ -29,6 +30,10 @@ const Showcase = (props) => {
       </section>
     </div>
   )
+}
+
+Showcase.propTypes = {
+  films: PropTypes.array.isRequired
 }
 
 export default Showcase;
