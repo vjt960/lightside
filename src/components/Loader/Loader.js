@@ -8,7 +8,7 @@ const Loader = () => {
       <Header />
       <img 
         className='loading-img'
-        src={require('../../images/bb8.gif')} 
+        src={require('../../images/running-bb8.gif')} 
         alt='BB8 Loading'/>
       <h2 className='loading-text'>Loading . . .</h2>
     </div>
