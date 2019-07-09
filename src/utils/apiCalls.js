@@ -1,6 +1,12 @@
 export const getFilms = () => {
   return fetch("https://swapi.co/api/films/")
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw Error("Error fetching data");
+      } else {
+        return response.json();
+      }
+    })
     .then(data =>
       data.results.map(film => {
         return {
@@ -16,7 +22,13 @@ export const getFilms = () => {
 
 export const getPeople = () => {
   return fetch("https://swapi.co/api/people/")
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw Error("Error fetching data");
+      } else {
+        return response.json();
+      }
+    })
     .then(data =>
       data.results.map(person => {
         return {
@@ -35,7 +47,13 @@ export const getPeople = () => {
 
 export const getPlanets = () => {
   return fetch("https://swapi.co/api/planets/")
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw Error("Error fetching data");
+      } else {
+        return response.json();
+      }
+    })
     .then(data =>
       data.results.map(planet => {
         return {
@@ -53,7 +71,13 @@ export const getPlanets = () => {
 
 export const getVehicles = () => {
   return fetch("https://swapi.co/api/vehicles/")
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw Error("Error fetching data");
+      } else {
+        return response.json();
+      }
+    })
     .then(data =>
       data.results.map(vehicle => {
         return {
@@ -85,5 +109,5 @@ export const fetchAPI = () => {
       return netData;
     })
     .then(dataSet => dataSet)
-    .catch(error => error);
+    .catch(error => Error("Error fetching data"));
 };
