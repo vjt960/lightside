@@ -10,6 +10,7 @@ const Catalog = (props) => {
         toggle={props.toggle} 
         type={obj.type} 
         name={obj.name} 
+        key={obj.name}
         favorited={obj.favorited}
         data={Object.entries(obj)} 
       />

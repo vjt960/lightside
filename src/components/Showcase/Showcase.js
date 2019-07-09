@@ -7,9 +7,9 @@ const Showcase = (props) => {
   const randomIndex = Math.floor(Math.random() * Math.floor(films.length))
   const movie = films[randomIndex]
   const crawls = movie.openingCrawl
-    .split('.').map(sentence => {
+    .split('.').map((sentence, index) => {
       return (
-        <p>{sentence}</p>
+        <p key={index}>{sentence}</p>
       )
     })
 
