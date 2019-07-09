@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './Card.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import "./Card.scss";
 
-const Card = (props) => {
+const Card = props => {
   let { data, type, name, favorited, toggle } = props;
-  data = data.slice(0, (data.length - 3))
+  data = data.slice(0, data.length - 3);
   const dataKeys = data.map((dataKey, index) => {
     return (
       <tr key={index}>
@@ -16,30 +16,27 @@ const Card = (props) => {
 
   return (
     <article>
-      <header className='card-header'>
-        <button 
-          className={`fave-toggle-btn toggle-${favorited}`} 
+      <header className="card-header">
+        <button
+          className={`fave-toggle-btn toggle-${favorited}`}
           onClick={() => toggle(type, name)}
         >
           <span>Favorite</span>
         </button>
       </header>
       <table>
-        <tbody>
-          { dataKeys }
-        </tbody>
+        <tbody>{dataKeys}</tbody>
       </table>
     </article>
-  )
-}
+  );
+};
 
 Card.propTypes = {
-  toggle: PropTypes.func.isRequired, 
-  type: PropTypes.string.isRequired, 
-  name: PropTypes.string.isRequired, 
-  favorited: PropTypes.bool.isRequired, 
-  data: PropTypes.array.isRequired
-}
+  toggle: PropTypes.func,
+  type: PropTypes.string,
+  name: PropTypes.string,
+  favorited: PropTypes.bool,
+  data: PropTypes.array
+};
 
 export default Card;
-
