@@ -2,7 +2,7 @@
 
 ## Description
 
-
+Lightside is a paired project created using React and Router to display components from the Star Wars API. On the loading page of the app, it randomized the opening crawl displayed in all the films and then allowed the user to view people, planets, vehicles or favorites. If the user added favorites, this would display. If not, it would prop the user to add favorites. This application emphasises Test Driven Development with Enzyme and Jest.
 
 ## Installation
 
