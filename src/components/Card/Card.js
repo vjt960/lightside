@@ -4,9 +4,9 @@ import './Card.scss';
 const Card = (props) => {
   let { data, type, name, favorited, toggle } = props;
   data = data.slice(0, (data.length - 3))
-  const dataKeys = data.map(dataKey => {
+  const dataKeys = data.map((dataKey, index) => {
     return (
-      <tr>
+      <tr key={index}>
         <td>{dataKey[0].toUpperCase()}</td>
         <td>{dataKey[1]}</td>
       </tr>
