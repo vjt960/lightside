@@ -59,6 +59,7 @@ class App extends Component {
 
   
   render() {
+
     const { films, people, planets, vehicles, favorites } = this.state;
 
     return (
@@ -69,11 +70,45 @@ class App extends Component {
           : <Showcase key={'films'} films={films} />
         }
         <Form counter={favorites.length} />
-        <Route exact path='/' render={() => <Catalog key={'home'} counter={1} data={[]} />} />
-        <Route exact path='/people' render={() => <Catalog toggle={this.toggleFavorite} key={'people'} counter={people.length} data={people} />} />
-        <Route exact path='/planets' render={() => <Catalog toggle={this.toggleFavorite} key={'planets'} counter={planets.length} data={planets} />} />
-        <Route exact path='/vehicles' render={() => <Catalog toggle={this.toggleFavorite} key={'vehicles'} counter={vehicles.length} data={vehicles} />} />
-        <Route exact path='/favorites' render={() => <Catalog toggle={this.toggleFavorite} key={'favorites'} counter={favorites.length} data={favorites} />} />
+        <Route exact path='/' render={() => 
+          <Catalog 
+            key={'home'} 
+            counter={1} 
+            data={[]} 
+          />} 
+        />
+        <Route exact path='/people' render={() => 
+          <Catalog 
+            toggle={this.toggleFavorite} 
+            key={'people'} 
+            counter={people.length} 
+            data={people} 
+          />} 
+        />
+        <Route exact path='/planets' render={() => 
+          <Catalog 
+            toggle={this.toggleFavorite} 
+            key={'planets'} 
+            counter={planets.length} 
+            data={planets} 
+          />} 
+        />
+        <Route exact path='/vehicles' render={() => 
+          <Catalog 
+            toggle={this.toggleFavorite} 
+            key={'vehicles'} 
+            counter={vehicles.length} 
+            data={vehicles} 
+          />} 
+        />
+        <Route exact path='/favorites' render={() => 
+          <Catalog 
+            toggle={this.toggleFavorite} 
+            key={'favorites'} 
+            counter={favorites.length} 
+            data={favorites} 
+          />} 
+        />
       </div>
     )
   }

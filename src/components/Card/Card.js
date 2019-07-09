@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Card.scss';
 
 const Card = (props) => {
@@ -25,6 +26,14 @@ const Card = (props) => {
       </table>
     </article>
   )
+}
+
+Card.propTypes = {
+  toggle: PropTypes.func.isRequired, 
+  type: PropTypes.string.isRequired, 
+  name: PropTypes.string.isRequired, 
+  favorited: PropTypes.bool.isRequired, 
+  data: PropTypes.array.isRequired
 }
 
 export default Card;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Form.scss';
+import PropTypes from 'prop-types';
 
 const Form = (props) => {
   const { counter } = props;
@@ -12,6 +13,10 @@ const Form = (props) => {
       <button type='button' className='category-btn fave-btn'><NavLink to='/favorites' className='nav-link'>favorites <span className='counter'>{counter}</span></NavLink></button>
     </form>
   )
+}
+
+Form.propTypes = {
+  counter: PropTypes.number.isRequired
 }
 
 export default Form;
