@@ -43,12 +43,10 @@ class App extends Component {
   };
 
   addFavorite = obj => {
-    console.log("adding favorite");
     this.setState({ favorites: [...this.state.favorites, obj] });
   };
 
   removeFavorite = name => {
-    console.log("removing favorite");
     const { favorites } = this.state;
     const filteredFaves = favorites.filter(obj => {
       return obj.name !== name;
