@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import { Route } from "react-router-dom";
-import { fetchAPI } from "../../utils/apiCalls";
-import Loader from "../Loader/Loader";
-import Showcase from "../Showcase/Showcase";
-import Form from "../Form/Form";
-import Catalog from "../Catalog/Catalog";
-import "./App.scss";
+import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
+import { fetchAPI } from '../../utils/apiCalls';
+import Loader from '../Loader/Loader';
+import Showcase from '../Showcase/Showcase';
+import Form from '../Form/Form';
+import Catalog from '../Catalog/Catalog';
+import './App.scss';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       isLoading: true,
-      error: "",
-      category: "",
+      error: '',
+      category: '',
       films: [],
       people: [],
       planets: [],
@@ -62,13 +62,13 @@ class App extends Component {
         {this.state.isLoading ? (
           <Loader />
         ) : (
-          <Showcase key={"films"} films={films} />
+          <Showcase key={'films'} films={films} />
         )}
         <Form counter={favorites.length} />
         <Route
           exact
           path="/"
-          render={() => <Catalog key={"home"} counter={1} data={[]} />}
+          render={() => <Catalog key={'home'} counter={1} data={[]} />}
         />
         <Route
           exact
@@ -76,7 +76,7 @@ class App extends Component {
           render={() => (
             <Catalog
               toggle={this.toggleFavorite}
-              key={"people"}
+              key={'people'}
               counter={people.length}
               data={people}
             />
@@ -88,7 +88,7 @@ class App extends Component {
           render={() => (
             <Catalog
               toggle={this.toggleFavorite}
-              key={"planets"}
+              key={'planets'}
               counter={planets.length}
               data={planets}
             />
@@ -100,7 +100,7 @@ class App extends Component {
           render={() => (
             <Catalog
               toggle={this.toggleFavorite}
-              key={"vehicles"}
+              key={'vehicles'}
               counter={vehicles.length}
               data={vehicles}
             />
@@ -112,7 +112,7 @@ class App extends Component {
           render={() => (
             <Catalog
               toggle={this.toggleFavorite}
-              key={"favorites"}
+              key={'favorites'}
               counter={favorites.length}
               data={favorites}
             />
