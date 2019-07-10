@@ -36,6 +36,9 @@ Then, go to http://localhost:3000/ in your browser to see the code running in th
 ### No Favorites
 ![Imgur](https://i.imgur.com/yFjkuBt.png)
 
+### Wireframe
+![wireframe](https://raw.githubusercontent.com/emilydittmer/lightside/master/src/images/lightside-wireframe.jpeg)
+
 
 ## Learning Goals
 - Learn how to wireframe and know why it is important.
